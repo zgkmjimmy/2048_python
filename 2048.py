@@ -131,7 +131,7 @@ class GameField(object):
             
         #绘制水平分割线的函数
         def draw_hor_separator():
-            line = '+' + ('+------' * self.width + '+')[1:]
+            line = '+' + ('+-----' * self.width + '+')[1:]
             separator=defaultdict(lambda: line)
             if not hasattr(draw_hor_separator,"counter"):
                 draw_hor_separator.counter=0
@@ -140,7 +140,7 @@ class GameField(object):
 
         #绘制竖直分割线的函数
         def draw_row(row):
-            cast(''.join('|{: ^5}'.format(num) if num > 0 else '|      ' for num in row) + '|')
+            cast(''.join('|{: ^5}'.format(num) if num > 0 else '|     ' for num in row) + '|')
         
         #清空屏幕
         screen.clear()
